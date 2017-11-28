@@ -3,6 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: dealerportalmss
-  host: dealerportalmss
+  name: Thedealerportalmss
+  host: Thedealerportalmss
   disk_quota: 1024M
