@@ -1,6 +1,6 @@
 applications:
 - path: .
-  memory: 1024
+  memory: 1024M
   instances: 1
   domain: mybluemix.net
   name: mss_dealerportal
