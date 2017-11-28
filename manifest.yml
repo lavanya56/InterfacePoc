@@ -3,6 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: Thedealer_portal
-  host: Thedealer_portal
+  name: Miracle_dealerportal
+  host: Miracle_dealerportal
   disk_quota: 1024M
