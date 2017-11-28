@@ -3,6 +3,6 @@ applications:
   memory: 1024M
   instances: 1
   domain: mybluemix.net
-  name: InterfaceMSS
-  host: InterfaceMSS
+  name: thedealerportal
+  host: thedealerportal
   disk_quota: 1024M
