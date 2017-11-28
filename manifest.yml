@@ -3,6 +3,6 @@ applications:
   memory: 1024M
   instances: 1
   domain: mybluemix.net
-  name: thedealerinterface_POC
-  host: thedealerinterface_POC
+  name: theinterface_POC
+  host: theinterface_POC
   disk_quota: 1024M
