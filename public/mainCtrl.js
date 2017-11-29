@@ -251,7 +251,7 @@ myApp.controller("chatbotController", function($scope,$http, $sce)
 		//	};
 				
 			
-		$http.post("https://dealerportalchatbot.mybluemix.net/message",data).then(function(response,err){
+		$http.post("https://dealerportalchatbot.mybluemix.net",data).then(function(response,err){
 			if(err)
 				{
 					$scope.chatbotmessages.append("Please try again");
