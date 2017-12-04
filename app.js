@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser')
-var cors = require('cors')
 
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://mss:mss@ds159180.mlab.com:59180/interfacedb';
@@ -20,12 +19,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
-
-//Enabling CORS
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
 var sess;
