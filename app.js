@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser')
+var cors = require('cors')
 
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://mss:mss@ds159180.mlab.com:59180/interfacedb';
