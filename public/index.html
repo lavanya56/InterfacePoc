@@ -13,7 +13,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
  <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
  
  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
@@ -1274,7 +1274,7 @@ $('#vdi_system').attr("disabled", true);
     setTimeout(function() {
 
     }, 1000 + (Math.random() * 20) * 100);
-    $("#chat-body").scrollTop(1200);
+    $("#chat-body").animate({scrollTop:1200},0);
 }
 
 function insertMessage() {
@@ -1287,7 +1287,7 @@ function insertMessage() {
 
     if ($.trim(msg) == '') {
       setTimeout(function() {
-      $("#chat-body").scrollTop(1200);
+      $("#chat-body").animate({scrollTop:1200},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
@@ -1299,19 +1299,19 @@ function insertMessage() {
     updateScrollbar();
 
     setTimeout(function() {
-      $("#chat-body").scrollTop(1200);
+      $("#chat-body").animate({scrollTop:1500},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
 
-    $("#chat-body").scrollTop(1200);
+    $("#chat-body").animate({scrollTop:1500},0);
 
 }
 
 $('.message-submit').click(function() {
     ////alert('messz sub');
     //insertMessage();
-    $("#chat-body").scrollTop(1500);
+    $("#chat-body").animate({scrollTop:1500},0);
 }); 
 
 
@@ -1319,7 +1319,7 @@ $(window).on('keydown', function(e) {
     if (e.which == 13) {
         ////alert('messz pushed');
         insertMessage();
-        $("#chat-body").scrollTop(1200);
+        $("#chat-body").animate({scrollTop:1200},0);
         return false;
     }
 })
@@ -1449,7 +1449,7 @@ function fakeMessage(hji) {
         $('<div class="message new"><figure class="avatar"><img src="mira.png" class="img1" /></figure>' + hji + '</div>').appendTo($('.mCSB_container')).addClass('new');
         setDate();
         updateScrollbar();
-        $("#chat-body").scrollTop(1500);
+        $("#chat-body").animate({scrollTop:1500},0);
         i++;
     }, 1000 + (Math.random() * 20) * 100);
     updateScrollbar();
