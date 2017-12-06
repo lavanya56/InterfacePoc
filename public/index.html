@@ -1133,7 +1133,7 @@ overflow:auto;
               <strong>Carmen</strong>
               <span class="glyphicon glyphicon-remove  pull-right" id="cross"></span>
       </div>
-      <div  class="messages" id="chat-body" style="background-color:white; overflow: scroll;">
+      <div  class="messages" id="chat-body" style="background-color:white;overflow-y:auto;">
           <div style="background-color:#f0f0ee;padding-bottom:10px;" ng-repeat="mess in chatbotmessages track by $index" ng-class="{'message message-personal':mess.personal==true,'message new':mess.new==true}" ><figure class="avatar"><img ng-src="{{mess.personal?'images/account.png':'images/mira1.png'}}" class="img1" /></figure>{{mess.value}}</div>
       </div>
       <div class="message-box">
@@ -1277,7 +1277,7 @@ $('#vdi_system').attr("disabled", true);
     setTimeout(function() {
 
     }, 1000 + (Math.random() * 20) * 100);
-    $("#chat-body").scrollTop(1200);
+    $("#chat-body").animate({scrollTop:1500},0);
 }
 
 function insertMessage() {
@@ -1290,7 +1290,7 @@ function insertMessage() {
 
     if ($.trim(msg) == '') {
       setTimeout(function() {
-      $("#chat-body").scrollTop(1200);
+      $("#chat-body").animate({scrollTop:1500},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
@@ -1302,19 +1302,19 @@ function insertMessage() {
     updateScrollbar();
 
     setTimeout(function() {
-      $("#chat-body").scrollTop(1500);
+      $("#chat-body").animate({scrollTop:1500},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
 
-    $("#chat-body").scrollTop(1500);
+    $("#chat-body").animate({scrollTop:1500},0);
 
 }
 
 $('.message-submit').click(function() {
     ////alert('messz sub');
     //insertMessage();
-    $("#chat-body").scrollTop(1500);
+    $("#chat-body").animate({scrollTop:1500},0);
 }); 
 
 
@@ -1322,7 +1322,7 @@ $(window).on('keydown', function(e) {
     if (e.which == 13) {
         ////alert('messz pushed');
         insertMessage();
-        $("#chat-body").scrollTop(1200);
+        $("#chat-body").animate({scrollTop:1500},0);
         return false;
     }
 })
