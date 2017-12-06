@@ -3,8 +3,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Interface POC</title>
-		 <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-     <link rel="stylesheet" type="text/css" media="screen" href="css/table.css" />
+   <!-- <script src="../node_modules/angular/angular.js"></script> -->
+   <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+   <script src="https://cdn.rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js"></script>
+   <!-- <script src="../node_modules/jsPDF/dist/jspdf.debug.js"></script> -->
+   <!-- <script src="../dist/saveHtmlToPdf.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/table.css" />
      
 		<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +18,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
  <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
  
  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
@@ -45,8 +49,7 @@
     <script src="js/pdfmake.min.js"></script>
     <script src="js/vfs_fonts.js"></script>  -->
     <script src='https://printjs-4de6.kxcdn.com/print.min.js'></script>
-    <link rel="stylesheet"   type="text/css" media="screen" href="https://printjs-4de6.kxcdn.com/print.min.css"/>
-    
+    <link rel="stylesheet"   type="text/css" media="screen" href="https://printjs-4de6.kxcdn.com/print.min.css"/>   
     
     
    
@@ -1274,7 +1277,7 @@ $('#vdi_system').attr("disabled", true);
     setTimeout(function() {
 
     }, 1000 + (Math.random() * 20) * 100);
-    $("#chat-body").animate({scrollTop:5000},0);
+    $("#chat-body").animate({scrollTop:1200},0);
 }
 
 function insertMessage() {
@@ -1287,7 +1290,7 @@ function insertMessage() {
 
     if ($.trim(msg) == '') {
       setTimeout(function() {
-      $("#chat-body").animate({scrollTop:5000},0);
+      $("#chat-body").animate({scrollTop:1200},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
@@ -1299,19 +1302,19 @@ function insertMessage() {
     updateScrollbar();
 
     setTimeout(function() {
-      $("#chat-body").animate({scrollTop:5000},0);
+      $("#chat-body").animate({scrollTop:1500},0);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
 
-    $("#chat-body").animate({scrollTop:5000},0);
+    $("#chat-body").animate({scrollTop:1500},0);
 
 }
 
 $('.message-submit').click(function() {
     ////alert('messz sub');
     //insertMessage();
-    $("#chat-body").animate({scrollTop:5000},0);
+    $("#chat-body").animate({scrollTop:1500},0);
 }); 
 
 
@@ -1319,7 +1322,7 @@ $(window).on('keydown', function(e) {
     if (e.which == 13) {
         ////alert('messz pushed');
         insertMessage();
-        $("#chat-body").animate({scrollTop:5000},0);
+        $("#chat-body").animate({scrollTop:1200},0);
         return false;
     }
 })
