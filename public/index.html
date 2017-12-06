@@ -7,7 +7,7 @@
    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
    <script src="https://cdn.rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js"></script>
    <!-- <script src="../node_modules/jsPDF/dist/jspdf.debug.js"></script> -->
-   <!-- <script src="../dist/saveHtmlToPdf.min.js"></script> -->
+   <script src="./node_modules/angular-save-html-to-pdf/dist/saveHtmlToPdf.min"></script>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/table.css" />
      
@@ -1133,7 +1133,7 @@ overflow:auto;
               <strong>Carmen</strong>
               <span class="glyphicon glyphicon-remove  pull-right" id="cross"></span>
       </div>
-      <div  class="messages" id="chat-body" style="background-color:white;padding-bottom:10px;">
+      <div  class="messages" id="chat-body" style="background-color:white;margin-bottom:10px;">
           <div style="background-color:#f0f0ee;" ng-repeat="mess in chatbotmessages track by $index" ng-class="{'message message-personal':mess.personal==true,'message new':mess.new==true}" ><figure class="avatar"><img ng-src="{{mess.personal?'images/account.png':'images/mira1.png'}}" class="img1" /></figure>{{mess.value}}</div>
       </div>
       <div class="message-box">
@@ -1277,7 +1277,7 @@ $('#vdi_system').attr("disabled", true);
     setTimeout(function() {
 
     }, 1000 + (Math.random() * 20) * 100);
-    $("#chat-body").animate({scrollTop:1200},0);
+    $("#chat-body").scrollTop(1200);
 }
 
 function insertMessage() {
@@ -1290,7 +1290,7 @@ function insertMessage() {
 
     if ($.trim(msg) == '') {
       setTimeout(function() {
-      $("#chat-body").animate({scrollTop:1200},0);
+      $("#chat-body").scrollTop(1200);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
@@ -1302,19 +1302,19 @@ function insertMessage() {
     updateScrollbar();
 
     setTimeout(function() {
-      $("#chat-body").animate({scrollTop:1500},0);
+      $("#chat-body").scrollTop(1500);
 
     }, 100 + (Math.random() * 20) * 100);
     updateScrollbar();
 
-    $("#chat-body").animate({scrollTop:1500},0);
+    $("#chat-body").scrollTop(1500);
 
 }
 
 $('.message-submit').click(function() {
     ////alert('messz sub');
     //insertMessage();
-    $("#chat-body").animate({scrollTop:1500},0);
+    $("#chat-body").scrollTop(1500);
 }); 
 
 
@@ -1322,7 +1322,7 @@ $(window).on('keydown', function(e) {
     if (e.which == 13) {
         ////alert('messz pushed');
         insertMessage();
-        $("#chat-body").animate({scrollTop:1200},0);
+        $("#chat-body").scrollTop(1200);
         return false;
     }
 })
@@ -1452,7 +1452,7 @@ function fakeMessage(hji) {
         $('<div class="message new"><figure class="avatar"><img src="mira.png" class="img1" /></figure>' + hji + '</div>').appendTo($('.mCSB_container')).addClass('new');
         setDate();
         updateScrollbar();
-        $("#chat-body").animate({scrollTop:1500},0);
+        $("#chat-body").scrollTop(1500);
         i++;
     }, 1000 + (Math.random() * 20) * 100);
     updateScrollbar();
