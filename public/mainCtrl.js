@@ -152,7 +152,7 @@ myApp.controller("chatbotController", function($scope,$http, $sce)
 		$scope.chatbotmessages.push({"personal":true, "value":inputtext});
 		$scope.inputText="";
 		
-		var data=  {"From":"+1 5185228953","Body":inputtext};
+		var data=  {"From":"+91 7337287299","Body":inputtext};
 		/*var docDefinition = {
 			content: [
 			  {
@@ -863,6 +863,21 @@ myApp.controller("invoiceDetailsCtrl", function ($scope, $http, $window, $locati
 		}
 
 	});
+	
+	var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {   
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('Invoice.pdf');
+});
 
 
 });
